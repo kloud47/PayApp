@@ -46,9 +46,8 @@ function Signup () {
     }
 
     return (
-        <div className="bg-slate-300 h-screen flex justify-center">
         <div className="flex flex-col justify-center">
-            <form action="" className="rounded-lg bg-white w-80 text-center p-2 h-max px-4" onSubmit={handleSubmit}>
+            <form action="" className="rounded-lg bg-[#fff] w-80 text-center p-2 h-max px-4" onSubmit={handleSubmit}>
                 <h1 className="font-bold text-4xl pt-6">Sign Up</h1>
                 <div className="text-sm font-medium text-left py-2">
                     <label htmlFor="firstName">First Name</label>
@@ -93,10 +92,9 @@ function Signup () {
                 <div className="pt-4">
                     <button className="w-full text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2" type="submit">Sign up</button>
                 </div>
-                <BottomWarning label={"Already have an account?"} buttonText={"Sign in"} to={'/signin'} />
+                <BottomWarning label={"Already have an account?"} buttonText={"Sign in"}/>
             </form>
             {/* {errors.length > 0 && (<p>Something went wrong</p>)} */}
-        </div>
         </div>
     );
 };

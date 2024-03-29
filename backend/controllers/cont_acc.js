@@ -30,7 +30,7 @@ exports.postTransfer = async (req, res) => {
     if (!accountTo) {
         await session.abortTransaction();
         return res.json({
-            msg: "Accoubnt does not exist"
+            msg: "Account does not exist"
         });
     }
 
