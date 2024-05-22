@@ -53,7 +53,7 @@ export default function Home() {
 
     return (
         <section className="h-[calc(100vh-100px)] w-screen relative" ref={home}>
-            <div className="BGhome z-5">
+            <div className="BGhome">
             </div>
             <div className="text-[#fff] absolute top-0 m-10 text-5xl">
                 <h1 className=" text1 font-serif">FOR,</h1>
@@ -66,11 +66,6 @@ export default function Home() {
             { isLoggedin &&
                 <div className="absolute top-0 right-0 mt-5 mx-10 login">
                 <Signin />
-                </div>
-            }
-            { isSignedup &&
-                <div className="absolute top-0 right-0 mt-5 mx-10 signup">
-                    <Signup />
                 </div>
             }
         </section>

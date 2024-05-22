@@ -2,21 +2,8 @@ import { useState } from "react";
 import BottomWarning from "./BottomWarning";
 
 function Signup () {
-    const [formState, setFormState] = useState({
-        firstName: "",
-        lastName: "",
-        email: "",
-        password: "",
-    });
-
     const [errors, setErrors] = useState([]);
-
-    const handleInput = (e) => {
-        setFormState({
-            ...formState,
-            [e.target.id]: e.target.value
-        })
-    }
+    const [formState, setFormState] = useState();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -46,7 +33,8 @@ function Signup () {
     }
 
     return (
-        <div className="flex flex-col justify-center">
+        <div className="grid place-self-center justify-center w-screen h-[calc(100vh-100px)]">
+            <div className="flex flex-col justify-center">
             <form action="" className="rounded-lg bg-[#fff] w-80 text-center p-2 h-max px-4" onSubmit={handleSubmit}>
                 <h1 className="font-bold text-4xl pt-6">Sign Up</h1>
                 <div className="text-sm font-medium text-left py-2">
@@ -95,6 +83,7 @@ function Signup () {
                 <BottomWarning label={"Already have an account?"} buttonText={"Sign in"}/>
             </form>
             {/* {errors.length > 0 && (<p>Something went wrong</p>)} */}
+            </div>
         </div>
     );
 };

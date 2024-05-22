@@ -19,12 +19,9 @@ export const Users = () => {
     ]);
     
     return <>
-        <div className="p-5">
-            <div className="font-bold text-[#040F23] text-lg">
-                Users
-            </div>
+        <div className="mx-5 mt-3">
             <div className="my-2">
-                <input type="text" placeholder="Search users..." className="w-full px-2 py-1 border rounded border-slate-200 lg:w-[70vw]"></input>
+                <input type="text" placeholder="Search users..." className="w-full px-2 border rounded border-slate-200 lg:w-[70vw]"></input>
             </div>
             <div>
                 {users.map(user => <User key={user._id} user={user} />)}
